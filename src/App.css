@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  margin: 0;
+  /* background-image: url('./backgroundimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-color: rgb(155, 180, 227);
+}
+
+.app-container {
+  width: 90%;
+  max-width: 700px;
+  height: 520px;
+  margin: 0;
+  padding: 20px; 
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.city-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
   color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.search-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.error-message, .loading-message {
+  color: #ff0000;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.recent-searches {
+  margin-top: 30px;
+  text-align: left;
+  color: black; 
+}
+
+.recent-search-item {
+  list-style: none;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.recent-search-item:last-child {
+  border-bottom: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 1.25rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app-container {
+    padding: 15px;
+  }
+
+  .city-input, .search-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1rem;
+  }
+
+  .app-container {
+    padding: 10px;
+  }
+
+  .city-input, .search-button {
+    font-size: 0.875rem;
+  }
+
+  .recent-searches {
+    margin-top: 20px;
   }
 }

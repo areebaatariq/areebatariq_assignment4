@@ -1,0 +1,14 @@
+.scale-selector {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .scale-dropdown {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
